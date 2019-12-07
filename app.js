@@ -1,11 +1,10 @@
 var express = require("express"),
   app = express(),
-  bodyParser = require("body-parser");
+  bodyParser = require("body-parser"),
+  d3 = require("d3");
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
-
-var Campgrounds = mongoose.model("Campground", campgroundSchema);
 
 app.get("/", (req, res) => {
   res.render("landing");

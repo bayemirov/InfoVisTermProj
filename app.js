@@ -1,42 +1,50 @@
-var express = require("express");
-var app = express();
+var express = require("express"),
+  app = express(),
+  bodyParser = require("body-parser");
 
-app.get("/", function(req, res) {
-	res.send("Hi there! Welcome to my assignment!");
+app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine", "ejs");
+
+var Campgrounds = mongoose.model("Campground", campgroundSchema);
+
+app.get("/", (req, res) => {
+  res.render("landing");
 });
 
-app.get("/:speak/:animal", function(req, res) {
-	switch (req.params.animal) {
-		case "pig":
-			res.send("The pig says 'Oink'");
-		case "cow":
-			res.send("The cow says 'Wow'");
-		case "dog":
-			res.send("The dog says 'Woof! Woof!'");
-		default:
-			res.send("Sorry...");
-	}
-})
 
-app.get("/repeat/:word/:number", function(req, res) {
-	try {
-		var number = req.params.number;
-		var word = req.params.word;
-		var result = "";
-		for (var i = 0; i < number; i++) {
-			result += word + ' ';
-		}
-		res.send(result);
-	} catch (err) {
-		res.send(err.message);
-	}
-})
-
-app.get("*", function(req, res) {
-	res.send("Sorry...");
-})
+// INDEX - show the list of all campgrounds
+app.get("/campgrounds", (req, res) => {
+  Campgrounds.find({}, (err, campgrounds) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.render("campgrounds", {campgrounds: campgrounds});
+    }
+  });
+});
 
 
-app.listen(3000, process.env.IP, function() {
-	console.log("Hello, I'm in Node now!");
+// CREATE - Add a new campground to DB
+app.post("/campgrounds", (req, res) => {
+  var newCampground = {
+    name: req.body.name,
+    image: req.body.image,
+    city: req.body.city
+  };
+  Campgrounds.create(newCampground, (err, campgrounds) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.redirect("campgrounds");
+    }
+  });
+});
+
+// NEW - Displays a form to make a new campground
+app.get("/campgrounds/new", (req, res) => {
+  res.render("newCampground");
+});
+
+app.listen(3000, () => {
+  console.log("Hello there!");
 });

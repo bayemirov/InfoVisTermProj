@@ -126,7 +126,7 @@ var output = document.getElementById("startDate");
 output.innerHTML = slider1.value;
 
 slider1.oninput = function() {
-  var time = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * this.value) / 100);
+  var time = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * this.value) / 10000);
   console.log(time);
   output.innerHTML = toHHMMSS(time);
 };
@@ -135,8 +135,8 @@ slider1.addEventListener("change", function() {
   var x = slider1.value;
   var color = 'liner-gradient(90deg, rgb(117, 252, 117)' + x + '%, rgb(214, 214, 214)' + x + '%)';
   slider1.style.background = color;
-  var startTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider1.value) / 100);
-  var endTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider2.value) / 100);
+  var startTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider1.value) / 10000);
+  var endTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider2.value) / 10000);
   drawBarChart(new Date(startTime), new Date(endTime));
 });
 
@@ -146,7 +146,7 @@ var output2 = document.getElementById("endDate");
 output2.innerHTML = slider2.value;
 
 slider2.oninput = function() {
-  var time = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * this.value) / 100);
+  var time = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * this.value) / 10000);
   output2.innerHTML = toHHMMSS(time);
 };
 
@@ -154,8 +154,8 @@ slider2.addEventListener("change", function() {
   var x = slider2.value;
   var color = 'liner-gradient(90deg, rgb(117, 252, 117)' + x + '%, rgb(214, 214, 214)' + x + '%)';
   slider2.style.background = color;
-  var startTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider1.value) / 100);
-  var endTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider2.value) / 100);
+  var startTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider1.value) / 10000);
+  var endTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider2.value) / 10000);
   drawBarChart(startTime, endTime);
 });
 

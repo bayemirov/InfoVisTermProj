@@ -5,6 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "d3": "^5.14.2",
+    "dateformat": "^3.0.3",
+    "deque": "0.0.4",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "fs": "0.0.1-security",

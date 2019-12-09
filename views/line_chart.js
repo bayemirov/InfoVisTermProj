@@ -1,6 +1,7 @@
 const data_url = 'https://raw.githubusercontent.com/bayemirov/InfoVisTermProj/master/data/BuildingProxSensorData/json/'
+const scale = 48;
 
-function get_data(filename) {
+function get_data(filename, stat, zone='F_1_Z_8A') {
     var data = {};
     var request = new XMLHttpRequest();
     request.open("GET", data_url + filename, false);
@@ -12,41 +13,26 @@ function get_data(filename) {
         var msg = entry;
         if(filename == 'floor1-MC2.json') msg = entry['message'];
         
-        const time = msg['Date/Time'].split(' ')[1];
-        var sum = 0.0;
-        var cnt = 0;
+        const time = msg['Date/Time'];
         for(const key in msg) {
-            if(key.includes('Thermostat Temp')) {
-                sum += parseFloat(msg[key]);
-                cnt++;
+            if(key.includes(stat) && key.includes(zone)) {
+                data[time] = parseFloat(msg[key]);
             }
         }
-        if(!(time in data)) data[time] = 0;
-        data[time] += (sum / cnt);
-    }
-    
-    for(key in data) {
-        data[key] /= 14.0;
     }
 
-    var times = Object.keys(data);
-    var new_data = {};
-    for(var i = 0; i < times.length; i++) {
-        new_data[times[i]] = 0;
-        for(var j = 0; j < 6; j++) {
-            new_data[times[i]] += data[times[i + j]];
-        }
-        new_data[times[i]] /= 6;
-        i += 5;
+    var newData = {}
+    var keys = Object.keys(data)
+    var avgCnt = Math.max(1, Math.round(keys.length / scale));
+    for(var i = 0; i < keys.length; i+=avgCnt) {
+        newData[keys[i]] = data[keys[i]];
     }
 
-    return new_data;
+    return newData;
 }
 
-function displayLineChart() {
-    const floor1 = get_data('floor1-MC2.json');
-    const floor2 = get_data('floor2-MC2.json');
-    const floor3 = get_data('floor3-MC2.json')
+function displayLineChart(stat) {
+    const floor1 = get_data('floor1-MC2.json', stat);
     var data = {
         labels: Object.keys(floor1),
         datasets: [
@@ -58,31 +44,30 @@ function displayLineChart() {
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(220,220,220,1)",
-                data: Object.values(floor1)
+                data: Object.values(floor1),
             },
-            {
-                label: "floor2",
-                fillColor: "rgba(151,187,205,0.2)",
-                strokeColor: "rgba(151,187,205,1)",
-                pointColor: "rgba(151,187,205,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(151,187,205,1)",
-                data: Object.values(floor2)
-            },
-            {
-                label: "floor3",
-                fillColor: "rgba(181,87,205,0.2)",
-                strokeColor: "rgba(181,87,205,1)",
-                pointColor: "rgba(181,87,205,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(181,87,205,1)",
-                data: Object.values(floor3)
-            }
         ]
     };
-    var ctx = document.getElementById("lineChart").getContext("2d");
-    var options = { };
+    var ctx = document.getElementById(stat).getContext("2d");
+    var options = {};
     var lineChart = new Chart(ctx).Line(data, options);
+}
+
+function displaySelected() {
+    console.log('kuku');
+    const stats = $("#select_stat>option").map(function() { return $(this).val(); });
+    const selected = $('#select_stat').val();
+    
+    for(const stat of stats) {
+        var div_id = '#' + stat + ' div';
+        if(selected.includes(stat)) {
+            displayLineChart(stat);
+            $(div_id).show();
+        }
+        else {
+            $(document).ready(function(){
+                $('#'+stat).hide();
+            console.log('hided')});
+        }
+    }
 }

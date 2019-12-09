@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1681e0b-2d5a-4f75-bc8b-a3815a949fb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/BuildingProxSensorData/json/f2z2-MC2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/BuildingProxSensorData/json/f2z2-MC2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/BuildingProxSensorData/json/floor1-MC2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/BuildingProxSensorData/json/floor1-MC2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Employee List.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/Employee_List.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/InfoVIS Term Project.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/InfoVIS Term Project.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/~$Employee List.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/~$Employee List.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +33,7 @@
           <entry key="html" value="6" />
           <entry key="jpg" value="2" />
           <entry key="js" value="12" />
-          <entry key="json" value="11" />
+          <entry key="json" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -52,7 +42,7 @@
           <entry key="EJS" value="7" />
           <entry key="HTML" value="6" />
           <entry key="Image" value="2" />
-          <entry key="JSON" value="11" />
+          <entry key="JSON" value="13" />
           <entry key="JavaScript" value="12" />
           <entry key="PLAIN_TEXT" value="3" />
         </counts>
@@ -64,6 +54,7 @@
           <entry key="ejs" value="51" />
           <entry key="html" value="471" />
           <entry key="js" value="6869" />
+          <entry key="json" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -71,6 +62,7 @@
           <entry key="CSS" value="2" />
           <entry key="EJS" value="51" />
           <entry key="HTML" value="471" />
+          <entry key="JSON" value="15" />
           <entry key="JavaScript" value="6869" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -93,8 +85,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="251">
-                  <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+                <state relative-caret-position="401">
+                  <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/data/BuildingProxSensorData/json/f2z2-MC2.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -138,6 +139,7 @@
       <find>console.log</find>
       <find>c</find>
       <find>console</find>
+      <find>2.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,6 +166,7 @@
         <option value="$PROJECT_DIR$/data/employee.csv" />
         <option value="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.html" />
         <option value="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.js" />
+        <option value="$PROJECT_DIR$/data/BuildingProxSensorData/json/f2z2-MC2.json" />
       </list>
     </option>
   </component>
@@ -207,6 +210,19 @@
               <item name="InfoVisTermProj" type="b2602c69:ProjectViewProjectNode" />
               <item name="InfoVisTermProj" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InfoVisTermProj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InfoVisTermProj" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="BuildingProxSensorData" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InfoVisTermProj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InfoVisTermProj" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="BuildingProxSensorData" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InfoVisTermProj" type="b2602c69:ProjectViewProjectNode" />
@@ -295,12 +311,12 @@
       <workItem from="1575707439833" duration="8154000" />
       <workItem from="1575808698666" duration="9857000" />
       <workItem from="1575891909630" duration="11767000" />
-      <workItem from="1575919105015" duration="5070000" />
+      <workItem from="1575919105015" duration="5328000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34848000" />
+    <option name="totallyTimeSpent" value="35106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-280" width="1920" height="1080" extended-state="0" />
@@ -474,10 +490,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/BuildingProxSensorData/json/f2z2-MC2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/BuildingProxSensorData/json/floor1-MC2.json">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="570">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="88" column="28" selection-start-line="88" selection-start-column="28" selection-end-line="88" selection-end-column="28" />
+        <state relative-caret-position="401">
+          <caret line="98" column="24" lean-forward="true" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
         </state>
       </provider>
     </entry>

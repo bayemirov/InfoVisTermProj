@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    <title>Zone changes Per Floor changes for average representative of departments</title>
+    <h1>Zone changes/Floor changes for average representative of each department</h1>
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <!-- Load color scale -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+    <!-- A bit of CSS: change stroke color of circle on hover (white -> black) -->
+    <style>
+        .bubbles {
+            stroke-width: 2px;
+            stroke: white;
+        }
+        .bubbles:hover {
+            stroke: black;
+        }
+    </style>
+</head>
+
+
+<body>
+<div class = "slideContainer">
+    <input type="range" min="0" max="10000" value="0" id = "myRange" class = "slider">
+    <p>Start Date: <span id="startDate"></span></p>
+</div>
+
+<div class = "slideContainer2">
+    <input type="range" min="0" max="10000" value="10000" id = "myRange2" class = "slider2">
+    <p>End Date: <span id="endDate"></span></p>
+</div>
+<script src="bubbleChart.js"></script>
+
+
+
+</body>

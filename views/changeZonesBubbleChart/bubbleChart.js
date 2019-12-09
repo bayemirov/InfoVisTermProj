@@ -80,7 +80,7 @@ var promise1 = new Promise(function(resolve, reject) {
 });
 
 function drawBubbleChart(startDate, endDate) {
-
+  // Something added
   promise1.then(function (value) {
     // expected output: "foo"
     var data = getZoneChangeData(startDate, endDate);

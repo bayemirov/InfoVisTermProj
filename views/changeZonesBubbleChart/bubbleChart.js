@@ -80,17 +80,12 @@ var promise1 = new Promise(function(resolve, reject) {
 });
 
 function drawBubbleChart(startDate, endDate) {
-  // Something added
   promise1.then(function (value) {
-    // expected output: "foo"
     var data = getZoneChangeData(startDate, endDate);
     console.log(data);
     d3.select("svg").remove();
     d3.select("div.tooltip").remove();
-    //d3.select("").remove();
-    // append the svg object to the body of the page
-    // Add X axis
-    //d3.select("svg").remove();
+
     var svg = d3.select("body")
       .append("svg")
       .attr("width", width + margin.left + margin.right)

@@ -1,0 +1,15 @@
+["Z_4", "Z_2", "Z_7", "Z_8B", "Z_3", "VAV_SYS", "Z_1", "Z_8A", "Z_5", "", "BATH_EXHAUST"]
+
+["VAV REHEAT Damper Position", "REHEAT COIL Power", "Thermostat Cooling Setpoint", "Equipment Power", "Thermostat Temp", "Thermostat Heating Setpoint", "AIR LOOP INLET Temperature", "COOLING COIL Power", "SUPPLY FAN OUTLET Temperature", "RETURN OUTLET CO2 Concentration", "VAV Availability Manager Night Cycle Control Status", "SUPPLY INLET Mass Flow Rate", "HEATING COIL Power", "Mechanical Ventilation Mass Flow Rate", "Lights Power", "SUPPLY INLET Temperature", "SUPPLY FAN OUTLET Mass Flow Rate", "RETURN OUTLE2. T CO2 Concentration", "SUPPLY FAN:Fan Power", "Outdoor Air Mass Flow Rate", "AIR LOOP INLET Mass Flow Rate", "Power", "Outdoor Air Flow Fraction"]
+
+
+
+["Z_6", "Z_12A", "Z_7", "Z_1", "Z_2", "VAV_SYS", "Z_11", "Z_14", "", "Z_12C", "Z_12B", "Z_9", "Z_5", "Z_10", "Z_3", "Z_15", "Z_16", "Z_4", "Z_8", "BATH_EXHAUST"]
+
+    ["Thermostat Temp", "RETURN OUTLET CO2 Concentration", "Thermostat Heating Setpoint", "VAV REHEAT Damper Position", "SUPPLY INLET Temperature", "Equipment Power", "Outdoor Air Flow Fraction", "Lights Power", SUPPLY FAN:Fan Power", "Thermostat Cooling Setpoint", "SUPPLY INLET Mass Flow Rate", "REHEAT COIL Power", "Power", "VAV Availability Manager Night Cycle Control Status", "SUPPLY FAN OUTLET Mass Flow Rate", "AIR LOOP INLET Temperature", "AIR LOOP INLET Mass Flow Rate", "Outdoor Air Mass Flow Rate", "COOLING COIL Power", "SUPPLY FAN OUTLET Temperature", "HEATING COIL Power"]
+
+
+
+["Z_6", "Z_1", "Z_7", "Z_11B", "Z_10", "Z_12", "Z_9", "Z_5", "VAV_SYS", "Z_2", "Z_11A", "Z_11C", "", "Z_8", "BATH_EXHAUST", "Z_3"]
+
+["Equipment Power", "RETURN OUTLET CO2 Concentration", "SUPPLY INLET Temperature", "SUPPLY INLET Mass Flow Rate", "VAV REHEAT Damper Position", "Thermostat Heating Setpoint", "REHEAT COIL Power", "Lights Power", "AIR LOOP INLET Mass Flow Rate", "Thermostat Cooling Setpoint", "Power","Thermostat Temp", "VAV Damper Position", "SUPPLY FAN:Fan Power", "COOLING COIL Power", "Outdoor Air Flow Fraction", "AIR LOOP INLET Temperature", "HEATING COIL Power", "Outdoor Air Mass Flow Rate", "SUPPLY FAN OUTLET Mass Flow Rate", "SUPPLY FAN OUTLET Temperature", "VAV Availability Manager Night Cycle Control Status"]

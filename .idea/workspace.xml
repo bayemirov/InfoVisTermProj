@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1681e0b-2d5a-4f75-bc8b-a3815a949fb5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/views/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/sensorLineCharts/view.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/sensorLineCharts/view.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/view.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,7 +62,7 @@
           <entry key="csv" value="1" />
           <entry key="ejs" value="51" />
           <entry key="html" value="549" />
-          <entry key="js" value="15673" />
+          <entry key="js" value="15712" />
           <entry key="json" value="18" />
           <entry key="txt" value="111" />
         </counts>
@@ -72,7 +73,7 @@
           <entry key="EJS" value="51" />
           <entry key="HTML" value="549" />
           <entry key="JSON" value="18" />
-          <entry key="JavaScript" value="15673" />
+          <entry key="JavaScript" value="15712" />
           <entry key="PLAIN_TEXT" value="112" />
         </counts>
       </usages-collector>
@@ -85,8 +86,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/sensorLineCharts/view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1771">
-                  <caret line="352" selection-start-line="352" selection-end-line="352" />
+                <state relative-caret-position="248">
+                  <caret line="617" column="26" selection-start-line="617" selection-start-column="26" selection-end-line="617" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -100,11 +101,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/view.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+                <state relative-caret-position="339">
+                  <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -118,11 +119,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/view.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="59" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="59" />
+                <state relative-caret-position="105">
+                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
                 </state>
               </provider>
             </entry>
@@ -179,8 +180,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data/BuildingProxSensorData/json/proxOut-ver2.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="271">
-                  <caret line="3168" column="32" lean-forward="true" selection-start-line="3168" selection-start-column="32" selection-end-line="3168" selection-end-column="32" />
+                <state relative-caret-position="1">
+                  <caret line="3150" column="3" lean-forward="true" selection-start-line="3150" selection-start-column="3" selection-end-line="3150" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -226,6 +227,8 @@
       <find>getPeopleData</find>
       <find>8</find>
       <find>console</find>
+      <find>prevZone</find>
+      <find>population</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -250,14 +253,14 @@
         <option value="$PROJECT_DIR$/data/employee.csv" />
         <option value="$PROJECT_DIR$/data/BuildingProxSensorData/json/f2z2-MC2.json" />
         <option value="$PROJECT_DIR$/views/sensorLineCharts/data.txt" />
-        <option value="$PROJECT_DIR$/views/view.html" />
         <option value="$PROJECT_DIR$/views/sensorLineCharts/view.html" />
-        <option value="$PROJECT_DIR$/views/sensorLineCharts/view.js" />
         <option value="$PROJECT_DIR$/views/sensorLineCharts/view.css" />
         <option value="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.html" />
         <option value="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.css" />
         <option value="$PROJECT_DIR$/views/changeZonesBubbleChart/bubbleChart.js" />
         <option value="$PROJECT_DIR$/views/view.js" />
+        <option value="$PROJECT_DIR$/views/sensorLineCharts/view.js" />
+        <option value="$PROJECT_DIR$/views/view.html" />
       </list>
     </option>
   </component>
@@ -395,8 +398,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.view.html (1)" />
-        <item itemvalue="JavaScript Debug.bubbleChart.html" />
         <item itemvalue="JavaScript Debug.view.html" />
+        <item itemvalue="JavaScript Debug.bubbleChart.html" />
         <item itemvalue="JavaScript Debug.chart_example_from_d3-graph-gallery (1).html" />
         <item itemvalue="JavaScript Debug.line_chart.html" />
       </list>
@@ -423,12 +426,12 @@
       <workItem from="1575985164414" duration="13433000" />
       <workItem from="1576000366652" duration="2580000" />
       <workItem from="1576040742104" duration="3317000" />
-      <workItem from="1576044243634" duration="6883000" />
+      <workItem from="1576044243634" duration="7885000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77134000" />
+    <option name="totallyTimeSpent" value="78136000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="734" extended-state="0" />
@@ -618,20 +621,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/BuildingProxSensorData/json/proxOut-ver2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/sensorLineCharts/view.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1771">
-          <caret line="352" selection-start-line="352" selection-end-line="352" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/sensorLineCharts/view.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -674,17 +663,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/view.html">
+    <entry file="file://$PROJECT_DIR$/data/BuildingProxSensorData/json/proxOut-ver2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="59" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="59" />
+        <state relative-caret-position="109">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/sensorLineCharts/view.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="617" column="26" selection-start-line="617" selection-start-column="26" selection-end-line="617" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/view.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        <state relative-caret-position="339">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/view.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

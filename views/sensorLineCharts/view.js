@@ -581,7 +581,6 @@ for (const x of types) {
 
 let zoneList = [];
 let typeList = [];
-let prevZone = {};
 
 for (const x of Object.keys(zonesn)) {
   zoneList.push(new Object());
@@ -604,6 +603,7 @@ function getPeopleData(startTime, endTime, selectedZone, selectedSensor) {
   }]
   */
   let population = 0;
+  let prevZone = {};
   let data = [];
   for (const entry of peopleCon) {
     const message = entry;
@@ -626,6 +626,8 @@ function getPeopleData(startTime, endTime, selectedZone, selectedSensor) {
       population++;
     else if (prevZone[message.proxCard] === selectedZone)
       population--;
+    if (population < 0)
+      population = 0;
     data = data.concat([{
       date: new Date(message["datetime"]),
       zone: selectedZone,

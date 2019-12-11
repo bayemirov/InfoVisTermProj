@@ -46,8 +46,8 @@ function getRoomCnt(start, end) {
 }
 
 var margin = {top: 20, right: 20, bottom: 70, left: 40},
-  width = 700 - margin.left - margin.right,
-  height = 350 - margin.top - margin.bottom;
+  width = 800 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal().rangeRoundBands([0, width], .05);
 

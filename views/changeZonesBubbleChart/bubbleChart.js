@@ -18,15 +18,13 @@ function getZoneChangeData(startDate, endDate) {
   let departmentFloorChangeCnt = {};// Department: Int
   let cardPrevZone = {}                 // Card: Zone
   var departmentCnt = {};
-  console.log(startDate)
-  console.log(endDate);
   for(const entry of obj) {
     let zone = entry['floor'].toString() + entry['zone'];
     let card = entry['proxCard'].substr(1);
     let currentDate = new Date(entry['datetime']);
-    if (currentDate > endDate)
+    if (currentDate.getTime() > endDate.getTime())
       break;
-    if (currentDate < startDate)
+    if (currentDate.getTime() < startDate.getTime())
       continue;
 
     if (department[card] in departmentZoneChangeCnt === false) {
@@ -81,8 +79,8 @@ var promise1 = new Promise(function(resolve, reject) {
 
 function drawBubbleChart(startDate, endDate) {
   promise1.then(function (value) {
+    console.log(department);
     var data = getZoneChangeData(startDate, endDate);
-    console.log(data);
     d3.select("svg").remove();
     d3.select("div.tooltip").remove();
 

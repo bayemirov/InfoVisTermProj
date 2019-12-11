@@ -19,24 +19,6 @@ p {
      margin-top: 50px;
  }
 
-.slider::after {
-    content: '06/13/2016 23:59:48';
-    color: black;
-    font-size: 1rem;
-    position: absolute;
-    left: 75%;
-    top: 2%;
-}
-
-.slider::before {
-    content: '05/31/2016 00:05:00';
-    color: black;
-    font-size: 1rem;
-    position: absolute;
-    left: 2%;
-    top: 2%;
-}
-
 .slider {
     -webkit-appearance: none;
     width: 100%;

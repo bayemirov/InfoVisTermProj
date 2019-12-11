@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 20, bottom: 30, left: 50},
-  width = 500 - margin.left - margin.right,
-  height = 420 - margin.top - margin.bottom;
+  width = 1200 - margin.left - margin.right,
+  height = 550 - margin.top - margin.bottom;
 var department = {};
 var departments = [];
 var start='2016-05-31 00:05:00', end = '2016-06-13 23:59:48';
@@ -52,7 +52,7 @@ function getZoneChangeData(startDate, endDate) {
     dataEntry.department = dep;
     dataEntry.zoneChangeCnt = Math.floor(departmentZoneChangeCnt[dep] / departmentCnt[dep]);
     dataEntry.floorChangeCnt = Math.floor(departmentFloorChangeCnt[dep] / departmentCnt[dep]);
-    dataEntry.peopleCnt = departmentCnt[dep];
+    dataEntry.peopleCnt = departmentCnt[dep] * 1.2;
     data.push(dataEntry);
   }
 
@@ -107,8 +107,8 @@ function drawBubbleChart(startDate, endDate) {
 
 // Add a scale for bubble size
     var z = d3.scaleLinear()
-      .domain([0, 300])
-      .range([0, 300]);
+      .domain([0, 500])
+      .range([0, 500]);
 
 // Add a scale for bubble color
     var myColor = d3.scaleOrdinal()

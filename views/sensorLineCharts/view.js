@@ -12,6 +12,7 @@ Parsing data in the following format:
 */
 var start='2016-05-31 00:05:00', end = '2016-06-13 23:59:48';
 var startDate = new Date(start), endDate = new Date(end);
+var st = new Date(start), en = new Date(end);
 
 var request = new XMLHttpRequest();
 request.open("GET", "../../data/BuildingProxSensorData/json/floor1-MC2.json", false);
@@ -78,8 +79,8 @@ function getMessageData(message, startTime, endTime, selectedZone, selectedSenso
       const o = data[data.length - 1];
       if (o.zone !== selectedZone
         || o.sensor !== selectedSensor
-        || o.date < startTime
-        || o.date > endTime)
+        || (new Date(o.date)).getTime() < startTime.getTime()
+        || (new Date(o.date)).getTime() > endTime.getTime())
         data.pop();
       else {
         data[data.length - 1].date = new Date(data[data.length - 1].date);
@@ -103,7 +104,6 @@ function getData(startTime, endTime, selectedZone, selectedSensor) {
     const message = entry;
     newData = newData.concat(getMessageData(message, startTime, endTime, selectedZone, selectedSensor));
   }
-  console.log(newData)
   return newData;
 }
 
@@ -128,7 +128,7 @@ function drawLineChart(data) {
   id++;
   // Add X axis --> it is a date format
   var x = d3.scaleTime()
-    .domain([startDate, endDate])
+    .domain([st, en])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -192,9 +192,67 @@ function onSubmit() {
     const floor = d3.select('#chart' + i + 'floor option:checked').text();
     const zone = d3.select('#chart' + i + 'zone option:checked').text();
     const type = d3.select('#chart' + i + 'type option:checked').text();
-    drawLineChart(getData(start, end, floor + '_' + zone, type));
+    drawLineChart(getData(st, en, floor + '_' + zone, type));
   }
 }
+
+//-------------------------------------------
+
+Number.prototype.padLeft = function(base,chr){
+  var  len = (String(base || 10).length - String(this).length)+1;
+  return len > 0? new Array(len).join(chr || '0')+this : this;
+}
+
+function toHHMMSS(sec_num) {
+  var d = new Date(sec_num);
+  return [(d.getMonth()+1).padLeft(),
+      d.getDate().padLeft(),
+      d.getFullYear()].join('/') +' ' +
+    [d.getHours().padLeft(),
+      d.getMinutes().padLeft(),
+      d.getSeconds().padLeft()].join(':');
+}
+
+//sliders
+var slider1 = document.getElementById("myRange");
+var output = document.getElementById("startDate");
+
+output.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+  var time = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * this.value) / 10000);
+  output.innerHTML = toHHMMSS(time);
+};
+
+slider1.addEventListener("change", function() {
+  var x = slider1.value;
+  var color = 'liner-gradient(90deg, rgb(117, 252, 117)' + x + '%, rgb(214, 214, 214)' + x + '%)';
+  slider1.style.background = color;
+  var startTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider1.value) / 10000);
+  var endTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider2.value) / 10000);
+  st = new Date(startTime);
+  en = new Date(endTime);
+});
+
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("endDate");
+
+output2.innerHTML = slider2.value;
+
+slider2.oninput = function() {
+  var time = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * this.value) / 10000);
+  output2.innerHTML = toHHMMSS(time);
+};
+
+slider2.addEventListener("change", function() {
+  var x = slider2.value;
+  var color = 'liner-gradient(90deg, rgb(117, 252, 117)' + x + '%, rgb(214, 214, 214)' + x + '%)';
+  slider2.style.background = color;
+  var startTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider1.value) / 10000);
+  var endTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider2.value) / 10000);
+  st = new Date(startTime);
+  en = new Date(endTime);
+});
 
 
 //drawLineChart(data);

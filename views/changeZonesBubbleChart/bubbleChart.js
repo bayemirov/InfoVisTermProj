@@ -228,6 +228,6 @@ slider2.addEventListener("change", function() {
   slider2.style.background = color;
   var startTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider1.value) / 10000);
   var endTime = startDate.getTime() + (((endDate.getTime() - startDate.getTime()) * slider2.value) / 10000);
-  drawBubbleChart(startTime, endTime);
+  drawBubbleChart(new Date(startTime), new Date(endTime));
 });
 

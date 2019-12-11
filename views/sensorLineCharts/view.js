@@ -108,8 +108,8 @@ function getData(startTime, endTime, selectedZone, selectedSensor) {
 }
 
 var margin = {top: 10, right: 30, bottom: 30, left: 60},
-  width = 460 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
+  width = 1200 - margin.left - margin.right,
+  height = 300 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var id = 1;

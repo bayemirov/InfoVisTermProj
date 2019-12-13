@@ -1,0 +1,47 @@
+<!-- Code from d3-graph-gallery.com -->
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'charts/line_chart.css' %}">
+      <title>InfoVis</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<script src="https://d3js.org/d3.v4.js"></script>
+
+    <div><nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">InfoVis</a>
+            </div>
+            <ul class="nav navbar-nav">
+              <li><a href="/charts">Home</a></li>
+              <li><a href="/charts/prox_chart">Prox</a></li>
+              <li class="active"><a href="#">Energy</a></li>
+              <li><a href="/charts/zone_change">Zone Change</a></li>
+            </ul>
+          </div>
+    </nav></div>
+<p>drag sliders to see the charts</p>
+<div class = "slideContainer">
+    <input type="range" min="0" max="10000" value="0" id = "myRange" class = "slider">
+    <p>Start Date: <span id="startDate"></span></p>
+</div>
+
+<div class = "slideContainer2">
+    <input type="range" min="0" max="10000" value="10000" id = "myRange2" class = "slider2">
+    <p>End Date: <span id="endDate"></span></p>
+</div>
+<button type="button" onclick="addSelect()">Add chart</button>
+<button type="button" onclick="onSubmit()">Submit</button>
+{% load static %}
+<script src="{% static 'charts/line_chart.js' %}"></script>
+</body>
